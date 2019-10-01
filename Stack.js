@@ -16,5 +16,15 @@ class Stack {
     this.isEmpty = function() {
       return this.myvar.length == 0;
     };
+    this.multiPop = function(n) {
+      if (n <= this.myvar.getSize) {
+        for (s = 0; s < n; s++) {
+          this.myvar.pop;
+        }
+        console.log(this.myvar);
+      } else {
+        alert("Index out of Bound!!");
+      }
+    };
   }
 }
