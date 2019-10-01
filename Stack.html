@@ -77,6 +77,12 @@
             y -= rectHeight;
           }
           context.fillText("Top", x - 85, y + rectHeight + 10);
+          context.fillText(
+            "Size : " + stack.getSize(),
+            x - 85,
+            y + rectHeight + 30
+          );
+
           drawArrowLine(
             context,
             x - 45,
@@ -106,6 +112,9 @@
           cr -= 1;
           $("#credit").html(`<strong>` + cr + `</strong>`);
         }
+        $("#data").html(`
+          <h6>Amortized Cost : 0 || Actual Cost : 1</h6>
+        `);
       }
 
       function multiPop(n) {
@@ -121,6 +130,9 @@
           }
         }
         // $("#credit").html(`<strong>` + cr + `</strong>`);
+        $("#data").html(`
+          <h6>Amortized Cost : 0 || Actual Cost : min(size, k)</h6>
+        `);
       }
 
       function push() {
@@ -132,7 +144,9 @@
           cr += 1;
         }
         $("#credit").html(`<strong>` + cr + `</strong>`);
-        $("#data").html("");
+        $("#data").html(`
+          <h6>Amortized Cost : 2 || Actual Cost : 1</h6>
+        `);
 
         draw();
       }
@@ -180,6 +194,7 @@
         $("#credit").html(`<h3>` + x + `</h3>`);
         // multiPop(2);
         console.log("multipop");
+
         // $.toast({
         //   heading: "Colors",
         //   text:
@@ -190,11 +205,6 @@
       }
       // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     </script>
-
-    <script
-      type="text/javascript"
-      src="http://www.armstrong.edu/cs-it"
-    ></script>
   </head>
 
   <body onload="draw()" onresize="draw()">
@@ -252,23 +262,63 @@
       >
         <canvas id="canvas" width="200" height="300"></canvas>
       </div>
+
       <div style="text-align: center; margin-top: 1em">
-        <span style="border: 1px solid #37826C; padding: 3px">
-          Enter a value:
-          <input
-            type="text"
-            value=""
-            id="value"
-            style="width: 3em; text-align: right"
-          />
-          <button type="button" class="button" onclick="push()">Push</button>
-        </span>
-        <button type="button" class="button" onclick="pop()">Pop</button>
-        <button type="button" class="button" onclick="peek()">Peek</button>
-        <button class="btn-warning" id="hello" onclick="hellosay()">
-          HELLO
+        <!-- <span style="border: 1px solid #37826C; padding: 3px"> -->
+        Enter Element Value:
+        <input
+          type="text"
+          value=""
+          id="value"
+          style="width: 3em; text-align: right ;"
+        />
+
+        <button
+          type="button"
+          class="btn-success"
+          style=" border-radius: 5px  ;margin-right: 1%"
+          onclick="push()"
+        >
+          Push
         </button>
-        <button class="btn-danger" id="multipopper" onclick="multiPop(2)">
+        <button
+          type="button"
+          class="btn-warning"
+          onclick="pop()"
+          style=" border-radius: 5px;margin-right: 1%"
+        >
+          Pop
+        </button>
+        <button
+          type="button"
+          class="btn-primary"
+          onclick="peek()"
+          style=" border-radius: 5px;margin-right: 1%"
+        >
+          Peek
+        </button>
+        <!-- <button
+          class="btn-warning"
+          id="hello"
+          onclick="hellosay()"
+          style=" border-radius: 5px"
+        >
+          HELLO
+        </button> -->
+        Enter 'k':
+        <input
+          type="text"
+          value=""
+          id="nval"
+          style="width: 3em; text-align: right ;"
+        />
+
+        <button
+          class="btn-danger"
+          id="multipopper"
+          onclick="multiPop($('#nval').val())"
+          style=" border-radius: 5px"
+        >
           multiPop
         </button>
 
