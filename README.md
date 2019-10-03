@@ -20,7 +20,7 @@
 ### <li> potential method :</li>
     Work done is proprtional to the Potential Energy.
     
-_Check my peronal website at ::_[](https://gauravgs.github.io)
+_Check my peronal website at ::_[gauravgs.github.io](https://gauravgs.github.io)
     
 **Feel free to star this repo & I would love to collaborate! Just create a PR!**
 
