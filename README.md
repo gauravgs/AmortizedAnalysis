@@ -1,7 +1,7 @@
 # AmortizedAnalysis
 ***
 
-[Live Demo at---------->](https://gauravgs.github.io/AmortizedAnalysis)
+[Live Demo](https://gauravgs.github.io/AmortizedAnalysis)
 
 ## DAA Assignment
 
