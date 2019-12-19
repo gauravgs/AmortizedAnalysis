@@ -3,13 +3,13 @@
 
 [Live Demo](https://gauravgs.github.io/AmortizedAnalysis)
 
-## DAA Assignment
+
 
 <dd>This repository contains the source code for Amortized Analysis project consisting of :</dd>
 <li>Javascript src code</li>
 <li>Jupyter Notebook</li>
 <li>Python Files</li>
-<li>UI ELements *with CDN's*</li>
+
 
 ---
 
